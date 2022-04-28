@@ -44,30 +44,63 @@ figure, section{
 }
 /*START OF HOVER CODE*/
 
-.imgNFT {
-    width: 320px;
-    height: 320px;
-    border-radius: 20px;
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
+.titleNFT:hover {
+    color: hsl(179, 74%, 74%);
 }
 
-.container:hover .imgNFT {
-    opacity: 0.3;
+  .container {
+    position: relative;
+    width: 50%;
   }
   
-  .container:hover .middle {
+  .image {
+    display: block;
+    margin-top: 20px;
+    width: 320px;
+    height: 300px;
+    opacity: .5;
+    border-radius: 20px;
+  }
+  i {
+      color: inherit;
+      margin-right: 20px;
+  }
+  
+  .overlay {
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    width: 320px;
+    opacity: -.5;
+    transition: .5s ease;
+    background-color: hsl(179, 74%, 74%);
+    background-blend-mode: lighten;
+  }
+  
+  .container:hover .overlay {
+    opacity: .5;
+  }
+  
+  .text {
+    color: inherit;
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     opacity: 1;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
   }
   
 /* END OF START OF HOVER CODE*/
 p {
     text-align: left;
-    font-size: 15px;
+    font-size: 14px;
     font-family: 'Outfit', sans-serif;
     opacity: 0.5;
 }
@@ -85,8 +118,10 @@ figure {
     width: 320px;
 }
 .titleNFT {
+    margin-top: 30px;
     text-align: left;
     color: hsl(0, 0%, 100%);
+    font-size: 23px;
 
 }
 .cardfooter {
@@ -115,5 +150,3 @@ img.cardfooter {
     margin-left: 50px;
     margin: auto 20px auto 50px;
 }
-
-
